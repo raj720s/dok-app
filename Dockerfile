@@ -9,7 +9,7 @@ ENV REACT_APP_BASE_URL=$REACT_APP_BASE_URL
 # Build process
 WORKDIR /app
 COPY package.json ./
-RUN npm install
+RUN npm install --legacy-peer-deps
 COPY . .
 RUN npm run build
 
